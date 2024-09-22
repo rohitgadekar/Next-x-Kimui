@@ -35,4 +35,9 @@ Ensure you have the following installed:
 
    ```bash
    git clone https://github.com/rohitgadekar/Next-x-Kimui.git
-   ```
+
+
+2. Node Package:
+
+   ```bash
+   npx create-next-app@latest -e https://github.com/rohitgadekar/Next-x-Kimui
