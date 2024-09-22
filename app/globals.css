@@ -3,25 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --transition: background-color 0.4s linear, color 0.3s linear;
+  --transition--darkmode: opacity 0.4s linear, visibility 0.3s linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  .sun {
+    display: block;
+    transition: var(--transition--darkmode);
+  }
+  .moon {
+    display: none;
+    transition: var(--transition--darkmode);
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  .moon {
+    display: block;
+    transition: var(--transition--darkmode);
+  }
+  .sun {
+    display: none;
+    transition: var(--transition--darkmode);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #67e8f9;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
