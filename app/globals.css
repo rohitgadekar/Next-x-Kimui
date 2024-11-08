@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --transition: background-color 0.4s linear, color 0.3s linear;
+  --transition--darkmode: opacity 0.4s linear, visibility 0.3s linear;
+}
+
+.dark {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  .sun {
+    display: block;
+    transition: var(--transition--darkmode);
+  }
+  .moon {
+    display: none;
+    transition: var(--transition--darkmode);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  .moon {
+    display: block;
+    transition: var(--transition--darkmode);
+  }
+  .sun {
+    display: none;
+    transition: var(--transition--darkmode);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #67e8f9;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
