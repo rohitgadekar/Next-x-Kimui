@@ -13,7 +13,7 @@ export default function About() {
             <h1 className="text-4xl">NEXT</h1>
             <h1 className="text-2xl font-light">x</h1>
             <h1 className="text-4xl">
-              kimui <sup className="text-xs">v8.0.1</sup>
+              kimui <sup className="text-xs">v8.0.5</sup>
             </h1>
           </div>
           <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
