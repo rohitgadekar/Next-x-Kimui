@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import "../node_modules/@rohitgadekar/kimui/dist/style.css";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import { siteConfig } from "@/config/site";
